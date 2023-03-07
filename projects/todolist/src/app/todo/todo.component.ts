@@ -45,12 +45,6 @@ export class TodoComponent {
     private todoService: TodoService
 ) { }
 
-  ngOnInit() {
-    this.todoService.deleteTodo().subscribe(
-        (todos) => this.todo = todos
-    )
-}
-
   onCheck() {
     TODOS.filter((todo) => todo.id === this.todo?.id)[0].isCompleted = !this.todo?.isCompleted;
   }
